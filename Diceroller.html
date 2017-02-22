@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Dice Rolling</title>
+    </head>
+    
+        <body>
+        <img id="cat" onmouseover="changeimage(this)" width= 100 height= 100 onclick="diceRoll ();"
+             src= "http://vignette2.wikia.nocookie.net/game-of-dice/images/c/cb/White_Dice.png/revision/latest?cb=20160113233423">
+        <!--- in css id should be written by #output. and give characteristics to it-->
+            <div id="output"></div>
+            
+            <script>
+                //this code uses javascript to add an image.
+                //function changeimage(node){
+                    //node.setAttribute("src", ("http://www.shodor.org/~rebeccat/diceLogo.png"));
+                //}
+                
+                function changeimage(id){
+                    id.src = "https://lh3.ggpht.com/zk0GLSyVRAHyT0gOBMGkXx5UJJpnUuKCipkDMr_zI54OjaM_J6mvb5ImRFVImkOFQQ=w300";
+                }
+            //math.floor will make the number that is produced by math.random in a whole number.
+            //6 is the number of sides.
+            function diceRoll (){
+            var randNum = Math.floor(Math.random() * 6) + 1;
+            
+            document.getElementById("output").innerHTML = randNum;
+            }
+            </script>
+        </body>
+</html>
